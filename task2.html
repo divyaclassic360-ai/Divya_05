@@ -1,0 +1,1936 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Mine Boii 🖤</title>
+
+<!-- Stylish Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+<style>
+
+/* =====================================================
+   BASIC
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    overflow:hidden;
+
+    font-family:'Poppins',sans-serif;
+
+    color:white;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            #6a0dad55,
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 85% 20%,
+            #ff149355,
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 50% 90%,
+            #00ffff33,
+            transparent 35%
+        ),
+
+        linear-gradient(
+            135deg,
+            #030006,
+            #09000f,
+            #02030a
+        );
+
+    position:relative;
+}
+
+
+/* =====================================================
+   COLORFUL BACKGROUND GLOW
+===================================================== */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    width:450px;
+    height:450px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            #ff00cc33,
+            #8a2be233,
+            transparent 70%
+        );
+
+    filter:blur(20px);
+
+    top:-150px;
+    left:-120px;
+
+    animation:
+        orb1 8s ease-in-out infinite alternate;
+
+    z-index:-2;
+}
+
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    width:500px;
+    height:500px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            #00ffff2e,
+            #4169e133,
+            transparent 70%
+        );
+
+    filter:blur(25px);
+
+    right:-180px;
+    bottom:-180px;
+
+    animation:
+        orb2 10s ease-in-out infinite alternate;
+
+    z-index:-2;
+}
+
+
+@keyframes orb1{
+
+    from{
+        transform:
+            translate(0,0)
+            scale(1);
+    }
+
+    to{
+        transform:
+            translate(100px,80px)
+            scale(1.25);
+    }
+}
+
+
+@keyframes orb2{
+
+    from{
+        transform:
+            translate(0,0)
+            scale(1);
+    }
+
+    to{
+        transform:
+            translate(-80px,-100px)
+            scale(1.3);
+    }
+}
+
+
+/* =====================================================
+   FLOATING HEARTS
+===================================================== */
+
+.bg{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    z-index:-1;
+}
+
+
+.heart{
+
+    position:absolute;
+
+    bottom:-60px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff1493,
+            #ff69b4,
+            #9b59ff,
+            #00ffff
+        );
+
+    -webkit-background-clip:text;
+
+    color:transparent;
+
+    opacity:.35;
+
+    filter:
+        drop-shadow(0 0 8px #ff1493)
+        drop-shadow(0 0 15px #8a2be2);
+
+    animation:
+        float 8s linear infinite;
+
+    pointer-events:none;
+}
+
+
+@keyframes float{
+
+    0%{
+        transform:
+            translateY(0)
+            rotate(0deg)
+            scale(.7);
+
+        opacity:0;
+    }
+
+    15%{
+        opacity:.35;
+    }
+
+    50%{
+        transform:
+            translateY(-50vh)
+            rotate(180deg)
+            scale(1);
+    }
+
+    100%{
+        transform:
+            translateY(-110vh)
+            rotate(360deg)
+            scale(1.2);
+
+        opacity:0;
+    }
+}
+
+
+/* =====================================================
+   LOGIN SCREEN
+===================================================== */
+
+.screen{
+
+    width:100%;
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:20px;
+}
+
+
+.card{
+
+    width:100%;
+
+    max-width:440px;
+
+    padding:45px 35px;
+
+    border-radius:32px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.09),
+            rgba(255,0,153,.04),
+            rgba(0,255,255,.04)
+        );
+
+    backdrop-filter:blur(25px);
+
+    border:1px solid #ffffff18;
+
+    box-shadow:
+
+        0 0 20px #ff149322,
+
+        0 0 50px #8a2be222,
+
+        0 25px 80px #000;
+
+    text-align:center;
+
+    animation:
+        appear .8s ease;
+}
+
+
+@keyframes appear{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(30px)
+            scale(.94);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* =====================================================
+   LOGIN LOGO
+===================================================== */
+
+.logo{
+
+    font-size:65px;
+
+    margin-bottom:10px;
+
+    filter:
+        drop-shadow(0 0 10px #ff1493)
+        drop-shadow(0 0 25px #9b59ff);
+
+    animation:
+        heartBeat 1.5s infinite;
+}
+
+
+@keyframes heartBeat{
+
+    50%{
+        transform:scale(1.15);
+    }
+}
+
+
+h1{
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size:38px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+}
+
+
+h2{
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size:30px;
+}
+
+
+.subtitle{
+
+    color:#cfc5d8;
+
+    font-size:14px;
+
+    margin-bottom:30px;
+}
+
+
+/* =====================================================
+   LOGIN INPUT
+===================================================== */
+
+.input{
+
+    width:100%;
+
+    padding:16px 18px;
+
+    margin:8px 0;
+
+    border-radius:16px;
+
+    border:1px solid #ffffff18;
+
+    outline:none;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff0c,
+            #ff14930b
+        );
+
+    color:white;
+
+    font-size:15px;
+
+    transition:.3s;
+}
+
+
+.input:focus{
+
+    border-color:#ff4db8;
+
+    box-shadow:
+
+        0 0 10px #ff149355,
+
+        0 0 25px #8a2be222;
+}
+
+
+.input::placeholder{
+
+    color:#8e8495;
+}
+
+
+/* =====================================================
+   LOGIN BUTTON
+===================================================== */
+
+.main-btn{
+
+    width:100%;
+
+    padding:16px;
+
+    margin-top:15px;
+
+    border:none;
+
+    border-radius:16px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff1493,
+            #00bfff
+        );
+
+    background-size:200%;
+
+    color:white;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 8px 25px #ff149344;
+
+    transition:.4s;
+
+    animation:
+        gradientMove 4s linear infinite;
+}
+
+
+.main-btn:hover{
+
+    transform:
+        translateY(-3px)
+        scale(1.02);
+
+    box-shadow:
+
+        0 0 20px #ff1493,
+
+        0 0 40px #8a2be2;
+}
+
+
+@keyframes gradientMove{
+
+    0%{
+        background-position:0%;
+    }
+
+    100%{
+        background-position:200%;
+    }
+}
+
+
+.error{
+
+    color:#ff7777;
+
+    font-size:13px;
+
+    margin-top:12px;
+
+    min-height:20px;
+}
+
+
+/* =====================================================
+   WEBSITE CONTENT
+===================================================== */
+
+.content{
+
+    display:none;
+
+    width:100%;
+
+    min-height:100vh;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:20px;
+}
+
+
+.content.active{
+
+    display:flex;
+}
+
+
+.page{
+
+    width:100%;
+
+    max-width:650px;
+
+    text-align:center;
+
+    animation:
+        pageIn .8s ease;
+}
+
+
+@keyframes pageIn{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(25px)
+            scale(.97);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* =====================================================
+   EMOJI
+===================================================== */
+
+.emoji{
+
+    font-size:70px;
+
+    margin-bottom:15px;
+
+    animation:
+        pulse 1.5s infinite;
+
+    filter:
+
+        drop-shadow(0 0 8px #ff1493);
+}
+
+
+@keyframes pulse{
+
+    50%{
+        transform:scale(1.1);
+    }
+}
+
+
+/* =====================================================
+   BIRTHDAY TITLE
+===================================================== */
+
+.title{
+
+    font-family:
+        'Pacifico',
+        cursive;
+
+    font-size:
+        clamp(30px,7vw,55px);
+
+    line-height:1.35;
+
+    margin-bottom:15px;
+}
+
+
+.gradient{
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff4da6,
+            #ffffff,
+            #00ffff,
+            #b56cff,
+            #ff4da6
+        );
+
+    background-size:300%;
+
+    -webkit-background-clip:text;
+
+    color:transparent;
+
+    animation:
+
+        rainbow 5s linear infinite,
+
+        glow 2s ease-in-out infinite alternate;
+}
+
+
+@keyframes rainbow{
+
+    to{
+        background-position:300%;
+    }
+}
+
+
+@keyframes glow{
+
+    from{
+
+        filter:
+            drop-shadow(
+                0 0 3px #ff1493
+            );
+    }
+
+    to{
+
+        filter:
+
+            drop-shadow(
+                0 0 10px #ff1493
+            )
+
+            drop-shadow(
+                0 0 30px #00ffff
+            );
+    }
+}
+
+
+/* =====================================================
+   QUESTIONS
+===================================================== */
+
+.question{
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
+    font-size:
+        clamp(26px,6vw,38px);
+
+    font-weight:600;
+
+    margin:25px 0 35px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #fff,
+            #ff9ed5,
+            #d8b4ff,
+            #8ffcff
+        );
+
+    -webkit-background-clip:text;
+
+    color:transparent;
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:15px;
+
+    min-height:70px;
+
+    position:relative;
+}
+
+
+.yes,
+.option{
+
+    border:none;
+
+    padding:14px 30px;
+
+    border-radius:30px;
+
+    font-size:15px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+
+.yes{
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff1493,
+            #9b59ff,
+            #00bfff
+        );
+
+    background-size:200%;
+
+    color:white;
+
+    font-weight:600;
+
+    box-shadow:
+        0 0 15px #ff149344;
+
+    animation:
+        gradientMove 4s linear infinite;
+}
+
+
+.yes:hover{
+
+    transform:scale(1.1);
+
+    box-shadow:
+
+        0 0 20px #ff1493,
+
+        0 0 35px #9b59ff;
+}
+
+
+.option{
+
+    background:#0d0b12;
+
+    color:#ff9bd4;
+
+    border:1px solid #ff149344;
+
+    box-shadow:
+        inset 0 0 15px #ff149311;
+}
+
+
+/* =====================================================
+   VIDEO
+===================================================== */
+
+.video-box{
+
+    width:100%;
+
+    max-width:550px;
+
+    margin:20px auto;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    border:1px solid #ff149344;
+
+    background:#050505;
+
+    box-shadow:
+
+        0 0 20px #ff149322,
+
+        0 0 50px #8a2be222;
+}
+
+
+video{
+
+    width:100%;
+
+    display:block;
+
+    max-height:400px;
+}
+
+
+/* =====================================================
+   MUSIC
+===================================================== */
+
+.music-box{
+    width:100%;
+
+    max-width:450px;
+
+    margin:30px auto;
+
+    padding:30px;
+
+    border-radius:28px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff14930b,
+            #9b59ff0b,
+            #00ffff0b
+        );
+
+    border:1px solid #ffffff15;
+
+    box-shadow:
+        0 0 30px #9b59ff22;
+}
+
+
+.disc{
+
+    width:120px;
+
+    height:120px;
+
+    border-radius:50%;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:45px;
+
+    background:
+        radial-gradient(
+            circle,
+            #ff1493,
+            #9b59ff 45%,
+            #050505 46%
+        );
+
+    border:3px solid #fff3;
+
+    box-shadow:
+
+        0 0 20px #ff1493,
+
+        0 0 40px #9b59ff;
+
+    animation:
+        spin 5s linear infinite;
+
+    animation-play-state:paused;
+}
+
+
+.disc.playing{
+
+    animation-play-state:running;
+}
+
+
+@keyframes spin{
+
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+
+audio{
+
+    width:100%;
+
+    margin-top:20px;
+}
+
+
+/* =====================================================
+   FINAL PAGE
+===================================================== */
+
+.final{
+
+    max-height:85vh;
+
+    overflow-y:auto;
+
+    padding:10px;
+}
+
+
+.final::-webkit-scrollbar{
+
+    width:4px;
+}
+
+
+.final::-webkit-scrollbar-thumb{
+
+    background:
+        linear-gradient(
+            #ff1493,
+            #9b59ff,
+            #00ffff
+        );
+
+    border-radius:10px;
+}
+
+
+.love{
+
+    font-size:60px;
+
+    filter:
+
+        drop-shadow(
+            0 0 10px #ff1493
+        )
+
+        drop-shadow(
+            0 0 25px #9b59ff
+        );
+
+    animation:
+        pulse 1.5s infinite;
+}
+
+
+.message{
+
+    margin-top:25px;
+
+    padding:28px;
+
+    border-radius:25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff08,
+            #ff14930b,
+            #9b59ff0b,
+            #00ffff08
+        );
+
+    border:1px solid #ffffff15;
+
+    text-align:left;
+
+    line-height:2;
+
+    color:#ddd;
+
+    box-shadow:
+        0 0 30px #9b59ff16;
+}
+
+
+.message strong{
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff4da6,
+            #ffd166,
+            #9b59ff,
+            #00ffff
+        );
+
+    -webkit-background-clip:text;
+
+    color:transparent;
+}
+
+
+/* =====================================================
+   CONFETTI
+===================================================== */
+
+.confetti{
+
+    position:fixed;
+
+    top:-20px;
+
+    width:9px;
+
+    height:9px;
+
+    border-radius:2px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff1493,
+            #ffd166,
+            #00ffff,
+            #9b59ff
+        );
+
+    animation:
+        fall 3s linear forwards;
+
+    z-index:10;
+
+    box-shadow:
+        0 0 8px #ff1493;
+}
+
+
+@keyframes fall{
+
+    to{
+
+        transform:
+            translateY(110vh)
+            rotate(720deg);
+
+        opacity:0;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:500px){
+
+    .card{
+
+        padding:
+            35px 22px;
+    }
+
+    .title{
+
+        font-size:34px;
+    }
+
+    .question{
+
+        font-size:27px;
+    }
+
+    .yes,
+    .option{
+
+        padding:
+            12px 20px;
+    }
+
+    .message{
+
+        font-size:13px;
+
+        line-height:1.8;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     BACKGROUND
+===================================================== -->
+
+<div class="bg" id="hearts"></div>
+
+
+<!-- =====================================================
+     LOGIN
+===================================================== -->
+
+<section
+    class="screen"
+    id="loginScreen"
+>
+
+    <div class="card">
+
+        <div class="logo">
+            🖤
+        </div>
+
+        <h1>
+            Something Special for my special one❤️‍🩹
+        </h1>
+
+        <p class="subtitle">
+            Only one person can enter here 🌍
+        </p>
+
+
+        <input
+            class="input"
+            id="username"
+            type="text"
+            placeholder="Username"
+        >
+
+
+        <input
+            class="input"
+            id="password"
+            type="password"
+            placeholder="Password"
+        >
+
+
+        <button
+            class="main-btn"
+            onclick="login()"
+        >
+            This is for you🖤
+        </button>
+
+
+        <div
+            class="error"
+            id="error"
+        ></div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     MAIN WEBSITE
+===================================================== -->
+
+<section
+    class="content"
+    id="website"
+>
+
+
+<!-- =====================================================
+     PAGE 1
+===================================================== -->
+
+<div
+    class="page"
+    id="page1"
+>
+
+    <div class="emoji">
+        🖤
+    </div>
+
+
+    <h1 class="title gradient">
+
+        Happy Birthday<br>
+
+        Mine Boii 🖤🌍💎
+
+    </h1>
+
+
+    <p class="subtitle">
+
+        I made something little special for you...
+
+    </p>
+
+
+    <button
+        class="yes"
+        onclick="showPage(2)"
+    >
+        Open it 🖤
+    </button>
+
+</div>
+
+
+
+<!-- =====================================================
+     PAGE 2 — QUESTION 1
+===================================================== -->
+
+<div
+    class="page"
+    id="page2"
+    style="display:none"
+>
+
+    <div class="emoji">
+        👀
+    </div>
+
+
+    <p class="question">
+
+        Who is your most favorite person? 🖤
+
+    </p>
+
+
+    <div class="buttons">
+
+
+        <!-- CORRECT -->
+
+        <button
+            class="yes"
+            onclick="showPage(3)"
+        >
+            Divya ❤️
+        </button>
+
+
+        <!-- ESCAPE -->
+
+        <button
+            class="option escape"
+            id="dhanamBtn"
+
+            onmouseenter="escapeButton(this)"
+
+            ontouchstart="escapeButton(this)"
+
+            onclick="escapeButton(this)"
+        >
+            Dhanam ❤️‍🩹
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     PAGE 3 — QUESTION 2
+===================================================== -->
+
+<div
+    class="page"
+    id="page3"
+    style="display:none"
+>
+
+    <div class="emoji">
+        🥹
+    </div>
+
+
+    <p class="question">
+
+        Divya is okay for you? 🖤
+
+    </p>
+
+
+    <div class="buttons">
+
+
+        <button
+            class="yes"
+            onclick="showPage(4)"
+        >
+            YES ❤️
+        </button>
+
+
+        <button
+            class="option escape"
+            id="noBtn"
+
+            onmouseenter="escapeButton(this)"
+
+            ontouchstart="escapeButton(this)"
+
+            onclick="escapeButton(this)"
+        >
+            NO 😏
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     PAGE 4 — VIDEO
+===================================================== -->
+
+<div
+    class="page"
+    id="page4"
+    style="display:none"
+>
+
+    <div class="emoji">
+        🎬
+    </div>
+
+
+    <h2>
+        Okay... one little thing 🖤
+    </h2>
+
+
+    <p class="subtitle">
+
+        Watch this before going to the next one.
+
+    </p>
+
+
+    <div class="video-box">
+
+        <!--
+            PUT YOUR VIDEO HERE
+
+            File name:
+            birthday-video.mp4
+        -->
+
+        <video
+            controls
+            playsinline
+        >
+
+            <source
+                src="VID-20260906-WA0001.mp4"
+                type="video/mp4"
+            >
+
+            Your browser does not support video.
+
+        </video>
+
+    </div>
+
+
+    <button
+        class="yes"
+        onclick="showPage(5)"
+    >
+        Next 🖤
+    </button>
+
+</div>
+
+
+
+<!-- =====================================================
+     PAGE 5 — SONG
+===================================================== -->
+
+<div
+    class="page"
+    id="page5"
+    style="display:none"
+>
+
+    <div class="emoji">
+        🎵
+    </div>
+
+
+    <h2>
+        Now... this song is for you 🖤
+    </h2>
+
+
+    <div class="music-box">
+
+
+        <div
+            class="disc"
+            id="disc"
+        >
+            🖤
+        </div>
+
+
+        <p
+            style="
+            margin:20px 0;
+            color:#aaa;
+            "
+        >
+            A little song for my favourite person 🌍
+        </p>
+
+
+        <!--
+            PUT YOUR SONG HERE
+
+            File name:
+            birthday-song.mp3
+        -->
+
+        <audio
+            id="song"
+            controls
+
+            onplay="playDisc()"
+
+            onpause="pauseDisc()"
+        >
+
+            <source
+                src="Neeyum Naanum Anbe song Full Screen WhatsApp Status__Imaikkaa Nodigal__M.A.Editz.mp3"
+                type="audio/mpeg"
+            >
+
+            Your browser does not support audio.
+
+        </audio>
+
+    </div>
+
+
+    <button
+        class="yes"
+        onclick="showPage(6)"
+    >
+        One Last Thing... ❤️
+    </button>
+
+</div>
+
+
+
+<!-- =====================================================
+     PAGE 6 — FINAL QUESTION
+===================================================== -->
+
+<div
+    class="page"
+    id="page6"
+    style="display:none"
+>
+
+    <div class="emoji">
+        💎
+    </div>
+
+
+    <p class="question">
+
+        Will you be mine forever &lt;3!! 🖤
+
+    </p>
+
+
+    <button
+        class="yes"
+        onclick="finalReveal()"
+    >
+        YES, FOREVER ❤️
+    </button>
+
+
+    <button
+        class="option escape"
+        id="finalNo"
+
+        onmouseenter="escapeButton(this)"
+
+        ontouchstart="escapeButton(this)"
+
+        onclick="escapeButton(this)"
+    >
+        NO 😏
+    </button>
+
+</div>
+
+
+
+<!-- =====================================================
+     PAGE 7 — FINAL
+===================================================== -->
+
+<div
+    class="page final"
+    id="page7"
+    style="display:none"
+>
+
+    <div class="love">
+        🖤
+    </div>
+
+
+    <h1 class="title gradient">
+
+        Happiest Birthday<br>
+
+        Mine Boiiii 🖤🌍💎
+
+    </h1>
+
+
+    <p style="color:#aaa;">
+
+        Stay happy and be hydrated 
+
+    </p>
+
+
+    <div class="message">
+
+        <p>
+
+            Nan la love la l lee pakka kodathunu irruthava nga😎
+            ana neenga vanthathum ena slurathunu thrla🫠 but
+            happy ah irruku unga koda pesum mothula etho oru
+            different ah thonum🥰divya ah ithu nu nan niraiya
+            time yochitan ok pothum rmba venda...
+
+        </p>
+
+
+        <br>
+
+
+        <p>
+
+            <strong>
+                Once again Happiest Birthday Samiii
+                🖤❤️‍🩹.....
+            </strong>
+
+        </p>
+
+
+        <br>
+
+
+        <p>
+
+            Miss you 🫂 &lt;3!!
+
+        </p>
+
+    </div>
+
+
+    <div class="love">
+
+        🖤🌍💎🫂
+
+    </div>
+
+</div>
+
+
+</section>
+
+
+
+<script>
+
+/* =====================================================
+   LOGIN
+===================================================== */
+
+function login(){
+
+    const username =
+        document
+        .getElementById("username")
+        .value
+        .trim();
+
+
+    const password =
+        document
+        .getElementById("password")
+        .value;
+
+
+    const error =
+        document
+        .getElementById("error");
+
+
+    if(
+        username === "Dinesh" &&
+        password === "Divya"
+    ){
+
+        document
+        .getElementById("loginScreen")
+        .style.display="none";
+
+
+        document
+        .getElementById("website")
+        .classList
+        .add("active");
+
+
+        createHearts();
+
+    }
+
+    else{
+
+        error.innerHTML =
+            "Hmm... wrong details 😏 Try again 🖤";
+
+    }
+
+}
+
+
+/* =====================================================
+   PAGE CONTROL
+===================================================== */
+
+function showPage(number){
+
+    document
+    .querySelectorAll(".page")
+    .forEach(page => {
+
+        page.style.display="none";
+
+    });
+
+
+    document
+    .getElementById("page"+number)
+    .style.display="block";
+
+}
+
+
+/* =====================================================
+   ESCAPE BUTTON
+===================================================== */
+
+function escapeButton(button){
+
+    const padding = 20;
+
+
+    const maxX =
+        window.innerWidth -
+        button.offsetWidth -
+        padding;
+
+
+    const maxY =
+        window.innerHeight -
+        button.offsetHeight -
+        padding;
+
+
+    const x =
+        Math.max(
+            padding,
+            Math.random() * maxX
+        );
+
+
+    const y =
+        Math.max(
+            padding,
+            Math.random() * maxY
+        );
+
+
+    button.style.position="fixed";
+
+    button.style.left=
+        x+"px";
+
+    button.style.top=
+        y+"px";
+
+    button.style.zIndex="9999";
+}
+
+
+/* =====================================================
+   FLOATING HEARTS
+===================================================== */
+
+function createHearts(){
+
+    const container =
+        document
+        .getElementById("hearts");
+
+
+    setInterval(()=>{
+
+        const heart =
+            document
+            .createElement("div");
+
+
+        heart.className="heart";
+
+
+        heart.innerHTML =
+            [
+                "♡",
+                "♥",
+                "🖤",
+                "💗",
+                "💜",
+                "💙",
+                "💎"
+            ][
+                Math.floor(
+                    Math.random()*7
+                )
+            ];
+
+
+        heart.style.left =
+            Math.random()*100+"vw";
+
+
+        heart.style.fontSize =
+            (
+                12 +
+                Math.random()*25
+            )+"px";
+
+
+        heart.style.animationDuration =
+            (
+                6 +
+                Math.random()*6
+            )+"s";
+
+
+        container.appendChild(heart);
+
+
+        setTimeout(()=>{
+
+            heart.remove();
+
+        },12000);
+
+
+    },450);
+
+}
+
+
+/* =====================================================
+   MUSIC DISC
+===================================================== */
+
+function playDisc(){
+
+    document
+    .getElementById("disc")
+    .classList
+    .add("playing");
+
+}
+
+
+function pauseDisc(){
+
+    document
+    .getElementById("disc")
+    .classList
+    .remove("playing");
+
+}
+
+
+/* =====================================================
+   FINAL REVEAL
+===================================================== */
+
+function finalReveal(){
+
+    showPage(7);
+
+    createConfetti();
+
+}
+
+
+/* =====================================================
+   CONFETTI
+===================================================== */
+
+function createConfetti(){
+
+    for(
+        let i=0;
+        i<120;
+        i++
+    ){
+
+        const piece =
+            document
+            .createElement("div");
+
+
+        piece.className="confetti";
+
+
+        piece.style.left =
+            Math.random()*100+"vw";
+
+
+        piece.style.animationDelay =
+            Math.random()*1.5+"s";
+
+
+        piece.style.transform =
+            "rotate("+
+            Math.random()*360+
+            "deg)";
+
+
+        document
+        .body
+        .appendChild(piece);
+
+
+        setTimeout(()=>{
+
+            piece.remove();
+
+        },4000);
+
+    }
+
+}
+
+
+/* =====================================================
+   ENTER KEY
+===================================================== */
+
+document.addEventListener(
+    "keydown",
+    function(e){
+
+        if(e.key === "Enter"){
+
+            const loginScreen =
+                document
+                .getElementById(
+                    "loginScreen"
+                );
+
+
+            if(
+                loginScreen.style.display
+                !== "none"
+            ){
+
+                login();
+
+            }
+
+        }
+
+    }
+);
+
+</script>
+
+</body>
+</html>
+```
